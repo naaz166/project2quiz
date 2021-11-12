@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(181, 216, 245);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.container {
+  border: 3px solid blue;
+  border-radius: 10px;
+  width: 600px;
+  padding: 20px;
+  display: none;
+  font-size: large;
+  background-color: cornsilk;
+}
+button {
+  margin-top: 10px;
+  font-size: 20px;
+  background-color: cadetblue;
+}
+.h1header {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.h2header {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+}
+input {
+  width: 10px;
+  height: 10px;
+}
+

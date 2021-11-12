@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>General Knowledge Quiz</title>
+</head>
+<body>
+     <!-- <h1 class="header">Simple General Knowledge Quiz</h1> -->
+    <div class="container">
+        <h1 class="h1header">Simple General Knowledge Quiz</h1><br>
+        <h2 class="h2header">Question One</h2>
+       <strong> Q1. Which swimming stroke is named after an insect?</strong><br><br>
+       <strong><input type="radio" name = "question1"> Caterpillar</strong><br>
+       <strong><input type="radio" name = "question1"> Ant</strong><br>
+       <strong><input type="radio" name = "question1" id="correct1"> Butterfly</strong><br>
+       <strong><input type="radio" name = "question1"> Honeybee</strong><br>
+       <strong></strong> <button class = "next" onclick="next(1)">NEXT</button>
+    </div>
+    <div class="container">
+        <h2 class="h2header">Question Two</h2>
+        <strong>Q2. How many sides has an octagon?</strong><br><br>
+        <strong><input type="radio" name = "question2"> Ten</strong><br>
+        <strong><input type="radio" name = "question2"> Six</strong><br>
+        <strong><input type="radio" name = "question2" id="correct2"> Eight</strong><br>
+        <strong><input type="radio" name = "question2"> Nine</strong><br>
+        <button class = "next" onclick="next(2)">NEXT</button>
+    </div>
+    <div class="container">
+        <h2 class="h2header">Question Three</h2>
+       <strong> Q3. What is the plural of  the word sheep?</strong><br><br>
+       <strong><input type="radio" name = "question3"> Goat</strong> <br>
+       <strong><input type="radio" name = "question3"> Sheeps</strong> <br>
+       <strong><input type="radio" name = "question3" id="correct3"> Sheep</strong><br>
+       <strong><input type="radio" name = "question3"> Lambs</strong><br>
+       <button class = "next" onclick="next(3)">NEXT</button> 
+    </div>
+    <div class="container">
+        <h2 class="h2header">Question Four</h2>
+       <strong> Q4. Which English Queen has the name as a type of plum?</strong><br><br>
+        <strong><input  type="radio" name = "question4"> Queen Georgia</strong><br>
+        <strong> <input type="radio" name = "question4"> Queen Elizebeth</strong><br>
+        <strong> <input type="radio" name = "question4" id="correct4"> Queen Victoria</strong><br>
+        <strong> <input type="radio" name = "question4"> Queen Mary</strong> <br>
+        <button class = "next" onclick="next(4)">NEXT</button>
+    </div>
+    <div class="container">
+        <h2 class="h2header">Question Five</h2>
+        <strong>Q5. What unit is used to measure Horses?</strong><br><br>
+        <strong><input type="radio" name = "question5"> Centimeters</strong><br>
+        <strong> <input type="radio" name = "question5"> Inches</strong><br>
+        <strong> <input type="radio" name = "question5" id="correct5"> Hands</strong><br>
+        <strong><input type="radio" name = "question5"> Feet</strong><br>
+        <button class = "next" onclick="next(5)"> NEXT </button>
+        <button  class ="button" onclick="result()" > SUBMIT QUIZ </button>
+    </div>
+    <script>
+        //displaying the first block of questions
+        document.getElementsByClassName('container')[0].style.display="block";
+        //next function
+        function next(id){
+            document.getElementsByClassName('container')[id-1].style.display="none";
+            document.getElementsByClassName('container')[id].style.display="block";
+        }
+        //function to get final result
+            function result(){
+                var score =0;
+                if(document.getElementById('correct1').checked)
+                {
+                    score++;
+                }
+                if(document.getElementById('correct2').checked)
+                {
+                    score++;
+                }
+                if(document.getElementById('correct3').checked)
+                {
+                    score++;
+                }
+                if(document.getElementById('correct4').checked)
+                {
+                    score++;
+                }
+                if(document.getElementById('correct5').checked)
+                {
+                    score++;
+                }
+                alert("YOUR SCORE IS:" + score);
+            }
+
+        
+
+    </script>
+    
+</body>
+</html> 
